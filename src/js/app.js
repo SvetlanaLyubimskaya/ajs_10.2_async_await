@@ -4,7 +4,8 @@ import GameSavingLoader from './GameSavingLoader';
     // Your code here with await
     try {
         const data = await GameSavingLoader.load();
-        return json(data);
+        const value = await json(data);
+        return value;
     } catch {
         return error;
     }
